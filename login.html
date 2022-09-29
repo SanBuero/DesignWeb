@@ -19,18 +19,22 @@
 <body>
   <main class="mt-5">
     <div class="container">
-      <h2>Login</h2>
+      <h2 class="text-center mb-3">Inicio de sesion</h2>
         <form id="forma" name="forma">
-            <div class="elemento">
-                <label for="usuario">Usuario</label>
-                <input type="text" id="usuario" name="usuario" required="true"/>
-            </div>
-            <div class="elemento">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required="true">
-            </div>
-            <div class="elemento">
-                <input onclick="location.href = 'index.html'"; type="submit" value="Login">
+            <div class="col-3 mx-auto mb-3">
+                <label for="usuario" class="form-label ">Usuario</label>
+              <div class="col-sm-14 ">
+                <input type="text" class="form-control" id="ormGroupExampleInput" placeholder="Ingrese su usuario" required="true"/>
+              </div>
+              </div>
+            <div class="col-3  mx-auto">
+                <label for="password" class="form-label">Password</label>
+                <div class="col-sm-14 mb-3 ">
+                  <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese su contraseña" required="true">
+                </div>
+              </div>
+            <div class="d-grid gap-2 col-3 mx-auto">
+                <input onclick="location.href = 'index.html'"; type="submit" class="btn btn-primary" value="Ingresar">
             </div>
         </form>
     </div>
