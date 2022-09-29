@@ -35,18 +35,17 @@ function showCategoriesList(array){
     for(let i = 0; i < array.products.length; i++){ 
         let category = array.products[i];
         htmlContentToAppend += `
-        <div class="seccion">
-            <h1 class="titulo">${category.name} - ${category.currency}${category.cost}</h1>
-        
-            <div class = "imagenes">
-                <img src="${category.image}" alt="any" class="thumbnail">
-            </div>
-            <div class="descripcion">
-                <p>${category.description}</p>
-            </div>    
-            <div class="vendidos">
+        <div class="row mb-2 p-2 shadow rounded">      
+              <div class= "col-2">
+                <img src="${category.image}" alt="any" class="img-fluid" " width="200px">
+              </div>
+              <div class= "col">
+                <h4 class="blockquote">${category.name} - ${category.currency}${category.cost}</h4>
+                <span class="-blockquote">${category.description}</span>
+              </div>  
+              <div class="col">
                 <p>${category.soldCount} vendidos</p>
-            </div>
+              </div>
         </div>
         `
         document.getElementById('container').innerHTML = htmlContentToAppend;
