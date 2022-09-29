@@ -1,4 +1,14 @@
-let LIST_URL = 'https://japceibal.github.io/emercado-api/cats_products/101.json';
+let LIST_URL = 'https://japceibal.github.io/emercado-api/cats_products/';
+let autos = new URL("101.json", LIST_URL);
+let juguetes = new URL("102.json", LIST_URL);
+let muebles = new URL("103.json", LIST_URL);
+let herramientas= new URL("104.json", LIST_URL);
+let computadoras = new URL("105.json", LIST_URL);
+let vestimenta = new URL("106.json", LIST_URL);
+let electrodomesticos = new URL("107.json", LIST_URL);
+let deportes = new URL("108.json", LIST_URL);
+let celulares = new URL("109.json", LIST_URL);
+
 
 //array donde se cargarán los datos recibidos:
 let categoriesArray = [];
@@ -63,7 +73,7 @@ EJECUCIÓN:
 
 
 document.addEventListener("DOMContentLoaded", function(e){
-    getJSNData(LIST_URL).then(function(resultObj){
+    getJSNData(autos).then(function(resultObj){
         if (resultObj.status === "ok")
         {
             categoriesArray = resultObj.data;
